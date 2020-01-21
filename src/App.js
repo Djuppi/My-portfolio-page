@@ -1,24 +1,43 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './style.scss';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { HashRouter, Route, Switch, Link } from 'react-router-dom';
+import Home from './components/Home' 
+import Portfolio from './components/Portfolio'
+import About from './components/About'
+import format from 'date-fns/format'
+import { DiClojureAlt } from 'react-icons/di'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <HashRouter>
+      <nav className="navbar">
+        <h1>Aske Djupnes Ammentorp</h1>
+        
+          <ul>
+            <Link to="/"><li>Home</li></Link>
+            <Link to='/portfolio'><li>Portfolio</li></Link>
+            <Link to='/skills'><li>Skills</li></Link>
+            <Link to='/about'><li>About</li></Link>
+          </ul>
+      </nav>
+      
+        <Switch>
+          <Route path='/' exact component={Home} />
+          <Route path='/portfolio' component={Portfolio} />
+          {/* <Route path='/skills' component={Skills} /> */}
+          <Route path='/about' component={About} />
+        </Switch>
+      
+      <footer>
+        <p>Find me at: </p>
+        <a href="https://github.com/djuppi" target="blank"><img className="logo" src="./media/github.png"></img></a>
+        <a href="https://www.linkedin.com/in/aske-djupnes-ammentorp-03434984/" target="blank"><img className="logo" src="./media/LinkedIn.png"></img></a>
+        <p className="copyright">Copyright&copy; {format(new Date(Date.now()), 'yyyy')} Aske Djupnes Ammentorp <DiClojureAlt /> IT Consultant at Academic Work, Norway.</p>
+      </footer>
+      </HashRouter>
     </div>
   );
 }
