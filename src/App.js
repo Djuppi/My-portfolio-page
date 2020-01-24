@@ -14,7 +14,7 @@ function App() {
     <div className="App">
       <HashRouter>
       <nav className="navbar">
-        <h1>Aske Djupnes Ammentorp</h1>
+        <Link to='/'><img src="../media/Logo.png" /></Link>
         
           <ul>
             <Link to="/"><li>Home</li></Link>
