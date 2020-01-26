@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
+
 import './style.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { HashRouter, Route, Switch, Link } from 'react-router-dom';
@@ -14,7 +15,7 @@ function App() {
     <div className="App">
       <HashRouter>
       <nav className="navbar">
-        <Link to='/'><img src="../media/Logo.png" /></Link>
+        <Link to='/'><img src="./media/Logo.png" alt="Logo"/></Link>
         
           <ul>
             <Link to="/"><li>Home</li></Link>

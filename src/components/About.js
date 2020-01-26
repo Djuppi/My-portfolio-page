@@ -21,11 +21,12 @@ class About extends React.Component {
                 <div>
                     <img src="./media/aske-banner.jpg"></img>
                     <h3>Aske Djupnes Ammentorp</h3>
-                        <p>I'm a JavaScript developer, educated from <a href="http://www.academy.no" target="blank">Academy Norway</a>. I went through 12 weeks of JavaScript bootcamp, which ended up in a group exam  </p>
+                        <p>I'm a JavaScript junior developer, educated at <a href="http://www.academy.no" target="blank">Academy Norway</a>. I went through 12 weeks of JavaScript bootcamp, which ended up in a group exam. During the education I learned skills based on JavaScript; ex. NodeJS, ReactJS, PostgreSQL Database and more. I chose the JavaScript course, because I wanted to develop my skills in programming, and Academy helped to kickstart my career in programming. 
+                        Before i began my journey into the IT-world, I was a gymnastics coach at Oslo turnforening. With a bachelor degree in Sport and Health, I have a big insight in the world of sports.  </p>
 
                     <div classname="skills">
-                        <DiJsBadge />
-                        <DiCss3 /> 
+                    <i class="devicon-javascript-plain"></i>
+                    <i class="devicon-css3-plain-wordmark colored"></i>
                         <DiHtml5 /> 
                         <DiSass /> 
                         <DiMaterializecss /> 
