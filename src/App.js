@@ -6,7 +6,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { HashRouter, Route, Switch, Link } from 'react-router-dom';
 import Home from './components/Home' 
 import Portfolio from './components/Portfolio'
-import About from './components/About'
+import About from './components/About';
+import Details from './components/Details'
 import format from 'date-fns/format'
 import { DiClojureAlt } from 'react-icons/di'
 
@@ -30,6 +31,7 @@ function App() {
           <Route path='/portfolio' component={Portfolio} />
           {/* <Route path='/skills' component={Skills} /> */}
           <Route path='/about' component={About} />
+          <Route path='/details/:id' component={Details} />
         </Switch>
       
       <footer>

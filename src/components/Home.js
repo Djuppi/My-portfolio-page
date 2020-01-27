@@ -20,8 +20,11 @@ class Home extends React.Component {
                 
                 <div className="home-portfolio">
                         <img className="profilePic" src="./media/aske.jpg" />
-                        <p className="summary">JavaScript specialised junior developer, with skills in React, Node.js, PostgreSQL.</p>
+                        <p className="summary">JavaScript specialised junior developer, with skills in ReactJS, Node.js and PostgreSQL.</p>
+                        <div>
                     <h4>See what i have done so far</h4>
+                    <p className="shortProject">Mostpart of my projects are programmed in ReactJS, but involves different kid of techniques.</p>
+                    </div>
                     <Button onClick={this.handlePortfolioClick.bind(this)} className="btn-flat" variant="flat">Portfolio <IoIosArrowForward /></Button>
                 </div>
             </div>

@@ -1,5 +1,5 @@
 $hoverColor: rgb(173, 238, 207);
-$textColor: #006;
+$textColor: #000;
 
 .App {
     text-align: center;
@@ -7,7 +7,8 @@ $textColor: #006;
     grid-template-columns: 200px repeat(2, 1fr) 200px;
     grid-template-rows: 50px 1fr 150px;
     row-gap: 40px;
-    
+    position: relative;
+    min-height: 100vh;
     background-color: rgba(232, 240, 247, 0.183);
     
     color: $textColor;
@@ -82,7 +83,6 @@ $textColor: #006;
     display: grid;
     grid-template-columns: repeat(2, 1fr) 3fr;
     grid-template-rows: 3fr 1fr;
-    text-align: unset;
     background-color: rgba(226, 229, 228, 0.353);
     img{
         
@@ -97,6 +97,7 @@ $textColor: #006;
         grid-area: 1 / 2 / 1 / 2;
         justify-self: start;
         float: left;
+        margin: 10px;
     }
     h4 {
         grid-area: 1 / 3 / 1 / 3;
@@ -106,6 +107,11 @@ $textColor: #006;
     button {
         grid-area: 2 / 3 / 2 / 3;
         margin: 10px 0 5px 0;
+        border: none
+    }
+
+    .shortProject {
+        max-width: 300px;
     }
     
 }
@@ -145,10 +151,11 @@ $textColor: #006;
 }
 
 footer{
-    position: static;
+    position: absolute;
     grid-area: 3 / 1 / 3 / span 4;
     bottom: 0;
     width: 100%;
+    height: 8rem;
     margin-bottom: 0;
     display: block;
     
@@ -173,7 +180,7 @@ footer{
     row-gap: 20px;
     column-gap: 20px;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 2fr 2fr;
+    grid-template-rows: 1fr 1fr 2fr;
     color: rgba(164, 165, 162, 0.748);
     p {
         grid-area: 2 / 1 / 2 / 2;
@@ -194,13 +201,11 @@ footer{
     li{
         box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
         width: 300px;
-        height: auto;
-        margin-left: 20px;
+        height: 170px;
+        margin-left: 75px;
         &:hover {
             box-shadow: 0 10px 10px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
             cursor: pointer;
-            background-color: rgba(0, 0, 0, .8);
-            z-index: 1;
         }
         
     }
@@ -209,9 +214,8 @@ footer{
             background-color: #FFF2F5;
         }
         width: 100%;
-        height: auto;
+        height: 100%;
         margin: 0;
-        padding: 5px 5px;
     }
     Button {
         margin-bottom: 5px;
@@ -246,9 +250,51 @@ footer{
     }
     .skills {
         grid-area: 3 / 2 / span 1 / 2;
-        i::before {
+        i {
             width: 30px;
+            height: 50px;
             font-weight: 400;
+        }
+        
+    }
+}
+
+.details {
+    grid-area: 2 / 2 / 2 / span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    img {
+        grid-area: 1 / 2 / 1 / 2;
+        width: 500px;
+    }
+    .detailsName {
+        grid-area: 1 / 1;
+        align-self: flex-end;
+        margin-bottom: 50px;
+    }
+    .detailsDescription {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .detailsYear{
+        grid-area: 2 / 2;
+    }
+    .btn-flat {
+        display: inline-block;
+        grid-area: 3/ 2;
+        width: 200px;
+        height: 50px;
+        align-self: flex-end;
+        justify-items: end;
+    }
+    .back{
+        grid-area: 1 / 1;
+        margin: 20px 10px;
+        cursor: pointer;
+        path{
+            height: 20px;
         }
         
     }
