@@ -27,13 +27,13 @@ $textColor: #000;
         grid-template-columns: 2fr 1fr;
         box-shadow: 0 0 2px -2px rgba(0, 0, 0, .2);
         height: 50px;
-        img{
+        #logo{
             grid-area: 1 / 1 / 1 / 1;
             left: 0;
             top: 0;
             width: 80px;
             position: relative;
-            text-align: left;
+            text-align: left !important;
         }
         ul {
             grid-area: 1 / 2;
