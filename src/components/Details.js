@@ -1,5 +1,6 @@
 import React from 'react'
 import { IoIosArrowBack } from 'react-icons/io'
+import { te } from 'date-fns/locale';
 
 class Details extends React.Component {
     constructor(props) {
@@ -42,12 +43,13 @@ class Details extends React.Component {
             projectForm, 
             year, 
             description, 
-            techniques, 
+            techniques = [], 
             image,
             fullProject
         } = this.state.project;
 
-        
+        const technique = techniques.join(', ')
+        console.log(technique)
         
         return(
             <div className="details">
@@ -56,7 +58,7 @@ class Details extends React.Component {
                 <h1 className="detailsName">{name}</h1>
                 <p className="detailsDescription">{description}</p>
                 <p className="detailsYear">Produced: {year}</p>
-                <p className="detailsTechniques"><strong>Techniques used:</strong> {techniques}</p>
+                <p className="detailsTechniques"><strong>Techniques used:</strong> {technique}</p>
                 <a href={fullProject} target="blank"><button className="btn-flat">See full project</button></a>
             </div>
         )

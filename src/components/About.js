@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { 
     DiJsBadge, 
     DiCss3, 
@@ -16,6 +16,7 @@ import {
 class About extends React.Component {
     render() {
         return (
+            <Fragment className="test">
             <div className="about">
                 <h2>About me</h2>
                 <div>
@@ -38,7 +39,13 @@ class About extends React.Component {
                     <i class="devicon-github-plain"></i>
                     </div>
                 </div>
+                
             </div>
+            
+            {/* <div classsName="resume">
+                <h4>EDUCATION</h4>
+            </div> */}
+        </Fragment>
         )
     }
 }

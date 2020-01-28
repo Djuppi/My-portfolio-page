@@ -23,7 +23,7 @@ class Home extends React.Component {
                         <p className="summary">JavaScript specialised junior developer, with skills in ReactJS, Node.js and PostgreSQL.</p>
                         <div>
                     <h4>See what i have done so far</h4>
-                    <p className="shortProject">Mostpart of my projects are programmed in ReactJS, but involves different kid of techniques.</p>
+                    <p className="shortProject">Mostpart of my projects are programmed in ReactJS, but involves different kind of techniques.</p>
                     </div>
                     <Button onClick={this.handlePortfolioClick.bind(this)} className="btn-flat" variant="flat">Portfolio <IoIosArrowForward /></Button>
                 </div>
