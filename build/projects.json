@@ -6,7 +6,7 @@
             "projectForm":[ "Group", "Graduation" ],
             "year": "2019",
             "description": "The project is based on the Norweigian/Scandinavian system of recycling bottles and cans. We wanted to find a way to change the way of recycling, so that the recyclingpoints didn't need to print your recipt on paper, but instead could get the recipt at your phone and the money right to your bank account. Therefore we made an app where it's posible to scan a code that the recyclingpoint is giving you, and then get the money into the app. The application is minded for smartphone usage, but it's a siglepaged webapplication at the moment. The plan is in the future to rewrite the code to React Native, a form that allows you to make a real phone application.",
-            "techniques": ["ReactJS, ", "PostgreSQL, ", "Transcations"],
+            "techniques": ["ReactJS", "PostgreSQL", "Transcations"],
             "image": "./media/projects/digipant.png",
             "fullProject": "https://pante-app.herokuapp.com/"
         },
