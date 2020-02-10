@@ -12,6 +12,16 @@
         },
         {
             "id": 2,
+            "name": "Boardgame Webshop",
+            "projectForm": ["Own time"],
+            "year": "2020",
+            "description": "This is a mockup of a webshop for boardgames, that me and a collegue created for the purpose of learning how to build a webshop. We've tried to set it up from A-Z, without the payment process though. The site is build upon Boardgame Atlas' API, where we've filtered out all the projects that didn't have a price. With the usage of Redux and local storage, we've managed to add items to the cart from different views and keeping them there when you refresh the page. This is my first project using Redux. ",
+            "techniques": ["ReactJS", "Redux", "Material Ui"],
+            "image": "./media/projects/Boardgame-Shop.png",
+            "fullProject": "https://paalchrb.github.io/board-game-shop/#/"
+        },
+        {
+            "id": 3,
             "name": "Movie Database",
             "projectForm": ["Educational"],
             "year": "2019",
@@ -21,7 +31,7 @@
             "fullProject": ""
         },
         {
-            "id": 3,
+            "id": 4,
             "name": "Phenix (twitter clone)",
             "projectForm": ["Educational"],
             "year": "2019",
@@ -30,5 +40,6 @@
             "image": "./media/projects/twitterclone.png",
             "fullProject": "https://phenix-twitter-clone.herokuapp.com/#/home"
         }
+        
     ]
 }
