@@ -1,5 +1,6 @@
 $hoverColor: rgb(173, 238, 207);
 $iconColor: rgba(100, 214, 142, 0.891);
+$headerColor: rgba(84, 84, 84, 0.748);
 $textColor: #000;
 
 .App {
@@ -71,7 +72,7 @@ $textColor: #000;
         padding: 5px;
         border-bottom: 2px solid lightgray;
         h2 {
-            color: rgba(164, 165, 162, 0.748)
+            color: $headerColor
         }
 }
 
@@ -184,11 +185,11 @@ footer{
     column-gap: 20px;
     grid-template-columns: 1fr;
     grid-template-rows: 80px 80px 2fr;
-    color: rgba(164, 165, 162, 0.748);
+    color: $headerColor;
     p {
         grid-area: 2 / 1 / 2 / 2;
         font-size: 1.5rem;
-        color: rgba(164, 165, 162, 0.748);
+        color: $textColor
     }
     ul{
         display: flex;
@@ -235,12 +236,15 @@ footer{
     margin: 0 auto;
     grid-area: 2/ 2/ 2/ span 2;
     display: grid;
+    color: $headerColor;
     img {
         grid-row: 2;
         width: 400px;
         padding: 5px;
     }
     h3{
+        color: $textColor;
+        font-size: 1.5rem;
         grid-row: 3;
         margin: 10px;
     }
@@ -250,7 +254,7 @@ footer{
         grid-area: 3 / 1;
         padding: 5px;
         margin: 5px;
-        
+        color: $textColor;
     }
     
         
@@ -279,6 +283,7 @@ footer{
         grid-area: 1 / 1;
         align-self: flex-end;
         margin-bottom: 50px;
+        color: $headerColor;
     }
     .detailsDescription {
         max-width: 600px;
@@ -310,12 +315,18 @@ footer{
 .skills {
     grid-area: 2 / 2/ 2 / span 2;
     display: grid;
-    grid-template-columns: 40px repeat(2, 1fr) 40px;
+    grid-template-columns: 20px repeat(2, 1fr) 20px;
     grid-template-rows: 50px auto;
-    column-gap: 10px;
+    column-gap: 20px;
     row-gap: 20px;
     h3 {
         grid-area: 1 / 2 / 1 / span 2;
+        color: $headerColor;
+    }
+    i {
+        font-size: 3rem;
+        color: $iconColor;
+        margin: 10px;
     }
     .Html-css {
         grid-area: 2 / 2;
@@ -326,12 +337,30 @@ footer{
             grid-area: 1 / 1;
             display: flex;
             flex-direction: column;
-            font-size: 3rem;
-            color: $iconColor;
+            
             i {
                 margin: 10px;
                 
             }
         }
+    }
+    .Javascript {
+        grid-area: 2 / 3;
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        height: auto;
+        margin-top: 30px;
+        .icons {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .After-course {
+        grid-area: 3 / 2;
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        height: auto;
+        margin-top: 20px;
+        justify-content: center;
     }
 }

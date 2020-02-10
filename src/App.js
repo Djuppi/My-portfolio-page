@@ -7,7 +7,7 @@ import { HashRouter, Route, Switch, Link } from 'react-router-dom';
 import Home from './components/Home' 
 import Portfolio from './components/Portfolio'
 import About from './components/About';
-// import Skills from './components/Skills';
+import Skills from './components/Skills';
 import Details from './components/Details'
 import format from 'date-fns/format'
 import { DiClojureAlt } from 'react-icons/di'
@@ -22,7 +22,7 @@ function App() {
           <ul>
             <Link to="/"><li>Home</li></Link>
             <Link to='/portfolio'><li>Portfolio</li></Link>
-            {/* <Link to='/skills'><li>Skills</li></Link> */}
+            <Link to='/skills'><li>Skills</li></Link>
             <Link to='/about'><li>About</li></Link>
           </ul>
       </nav>
@@ -30,7 +30,7 @@ function App() {
         <Switch>
           <Route path='/' exact component={Home} />
           <Route path='/portfolio' component={Portfolio} />
-          {/* <Route path='/skills' component={Skills} /> */}
+          <Route path='/skills' component={Skills} />
           <Route path='/about' component={About} />
           <Route path='/details/:id' component={Details} />
         </Switch>

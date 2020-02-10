@@ -22,28 +22,11 @@ class About extends React.Component {
                 <div>
                     <img src="./media/aske-banner.jpg"></img>
                     <h3>Aske Djupnes Ammentorp</h3>
-                        <p>I'm a JavaScript junior developer, educated at <a href="http://www.academy.no" target="blank">Academy Norway</a>. I went through 12 weeks of JavaScript bootcamp, which ended up in a graduation project. During the education I learned skills based on JavaScript; ex. NodeJS, ReactJS, PostgreSQL Database and more. I chose the JavaScript course, because I wanted to develop my skills in programming, and Academy helped to kickstart my career in programming. 
-                        Before i began my journey into the IT-world, I was a gymnastics coach at Oslo turnforening. With a bachelor degree in Sport and Health, I have a big insight in the world of sports. </p>
-
-                    <div>
-                    <i class="devicon-javascript-plain"></i>
-                    
-                    <i class="devicon-sass-original"></i>
-                        <DiMaterializecss /> 
-                    <i class="devicon-heroku-original-wordmark"></i>
-                        <DiNodejs /> 
-                        <DiPostgresql /> 
-                        <DiReact /> 
-                        <DiGit /> 
-                    <i class="devicon-github-plain"></i>
-                    </div>
+                        <p>I'm a JavaScript junior developer, educated at <a href="http://www.academy.no" target="blank">Academy Norway</a>. I went through a 12 weeks JavaScript bootcamp, which ended up in a graduation project. During the education I learned skills based on JavaScript or connected to JavaScript; ex. NodeJS, ReactJS, PostgreSQL Database and more. I chose the JavaScript course, because I wanted to develop my skills in programming, and Academy helped to kickstart my career as a devoloper. 
+                        Before I began my journey into the IT-world, I was a gymnastics coach at Oslo turnforening. With a bachelor degree in Sport and Health, I have a big insight in the world of sports, and I think that my organisation and leader skills are pretty good. </p>
                 </div>
                 
             </div>
-            
-            {/* <div classsName="resume">
-                <h4>EDUCATION</h4>
-            </div> */}
         </Fragment>
         )
     }
