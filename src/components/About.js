@@ -25,10 +25,9 @@ class About extends React.Component {
                         <p>I'm a JavaScript junior developer, educated at <a href="http://www.academy.no" target="blank">Academy Norway</a>. I went through 12 weeks of JavaScript bootcamp, which ended up in a graduation project. During the education I learned skills based on JavaScript; ex. NodeJS, ReactJS, PostgreSQL Database and more. I chose the JavaScript course, because I wanted to develop my skills in programming, and Academy helped to kickstart my career in programming. 
                         Before i began my journey into the IT-world, I was a gymnastics coach at Oslo turnforening. With a bachelor degree in Sport and Health, I have a big insight in the world of sports. </p>
 
-                    <div classname="skills">
+                    <div>
                     <i class="devicon-javascript-plain"></i>
-                    <i class="devicon-css3-plain-wordmark"></i>
-                    <i class="devicon-html5-plain-wordmark"></i>
+                    
                     <i class="devicon-sass-original"></i>
                         <DiMaterializecss /> 
                     <i class="devicon-heroku-original-wordmark"></i>

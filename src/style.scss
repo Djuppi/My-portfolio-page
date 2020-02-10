@@ -1,4 +1,5 @@
 $hoverColor: rgb(173, 238, 207);
+$iconColor: rgba(100, 214, 142, 0.891);
 $textColor: #000;
 
 .App {
@@ -182,7 +183,7 @@ footer{
     row-gap: 20px;
     column-gap: 20px;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 2fr;
+    grid-template-rows: 80px 80px 2fr;
     color: rgba(164, 165, 162, 0.748);
     p {
         grid-area: 2 / 1 / 2 / 2;
@@ -191,8 +192,10 @@ footer{
     }
     ul{
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
+        flex-wrap: wrap;
         grid-area: 3 / 1 / 3 / 2;
+        text-align: center;
         a {
             color: $textColor;
             &:hover {
@@ -204,7 +207,7 @@ footer{
         box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
         width: 300px;
         height: 170px;
-        margin-left: 75px;
+        margin: 20px 20px ;
         &:hover {
             box-shadow: 0 10px 10px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
             cursor: pointer;  
@@ -249,15 +252,9 @@ footer{
         margin: 5px;
         
     }
-    .skills {
-        grid-area: 3 / 2 / span 1 / 2;
-        i {
-            width: 30px;
-            height: 50px;
-            font-weight: 400;
-        }
+    
         
-    }
+    
     
 }
 
@@ -310,4 +307,31 @@ footer{
     }
 }
 
-
+.skills {
+    grid-area: 2 / 2/ 2 / span 2;
+    display: grid;
+    grid-template-columns: 40px repeat(2, 1fr) 40px;
+    grid-template-rows: 50px auto;
+    column-gap: 10px;
+    row-gap: 20px;
+    h3 {
+        grid-area: 1 / 2 / 1 / span 2;
+    }
+    .Html-css {
+        grid-area: 2 / 2;
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        height: auto;
+        .icons {
+            grid-area: 1 / 1;
+            display: flex;
+            flex-direction: column;
+            font-size: 3rem;
+            color: $iconColor;
+            i {
+                margin: 10px;
+                
+            }
+        }
+    }
+}
