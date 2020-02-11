@@ -39,7 +39,8 @@ class Details extends React.Component {
         const { history } = this.props;
         const { 
             id, 
-            name, 
+            name,
+            done, 
             projectForm, 
             year, 
             description, 
@@ -56,14 +57,14 @@ class Details extends React.Component {
             <div className="details">
                 <IoIosArrowBack className="back" onClick={this.handleGoBackClick.bind(this)} />
                 <img src={image} alt={name}/>
-                <h1 className="detailsName">{name}</h1>
+                <h1 className="detailsName">{name} </h1>
                 <p className="detailsDescription">{description}</p>
                 {extraLink && <a href={extraLink} className="detailsLink" target="blank">{extraLink}</a>}
                 <ul className="detailsList">
                     <li className="detailsYear"><strong>Produced:</strong> {year}</li>
                     <li className="detailsTechniques"><strong>Techniques used:</strong> {technique}</li>
                 </ul>
-                <a href={fullProject} target="blank"><button className="btn-flat">See full project</button></a>
+                <a href={fullProject} className="btn-link" target="blank"><button className="btn-flat">See full project</button></a>
             </div>
         )
     }

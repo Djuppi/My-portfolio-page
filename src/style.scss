@@ -300,13 +300,14 @@ footer{
         grid-area: 3 / 1;
         margin-top: 20px;
     }
-    .btn-flat {
-        display: inline-block;
+    .btn-link {
         grid-area: 3/ 2;
-        width: 200px;
-        height: 50px;
         align-self: flex-end;
         justify-items: end;
+    }
+    .btn-flat {
+        width: 200px;
+        height: 50px;
     }
     .back{
         grid-area: 1 / 1;
