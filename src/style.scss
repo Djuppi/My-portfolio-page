@@ -290,8 +290,15 @@ footer{
         margin: 0 auto;
     }
 
-    .detailsYear{
+    .detailsList{
         grid-area: 2 / 2;
+        li{
+            margin: 20px;
+        }
+    }
+    .detailsLink {
+        grid-area: 3 / 1;
+        margin-top: 20px;
     }
     .btn-flat {
         display: inline-block;
@@ -304,9 +311,10 @@ footer{
     .back{
         grid-area: 1 / 1;
         margin: 20px 10px;
+        font-size: 2rem;
         cursor: pointer;
-        path{
-            height: 20px;
+        &:hover {
+            fill: $iconColor;
         }
         
     }

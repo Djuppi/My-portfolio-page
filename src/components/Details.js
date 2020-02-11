@@ -43,7 +43,8 @@ class Details extends React.Component {
             projectForm, 
             year, 
             description, 
-            techniques = [], 
+            techniques = [],
+            extraLink,
             image,
             fullProject
         } = this.state.project;
@@ -57,8 +58,11 @@ class Details extends React.Component {
                 <img src={image} alt={name}/>
                 <h1 className="detailsName">{name}</h1>
                 <p className="detailsDescription">{description}</p>
-                <p className="detailsYear">Produced: {year}</p>
-                <p className="detailsTechniques"><strong>Techniques used:</strong> {technique}</p>
+                {extraLink && <a href={extraLink} className="detailsLink" target="blank">{extraLink}</a>}
+                <ul className="detailsList">
+                    <li className="detailsYear"><strong>Produced:</strong> {year}</li>
+                    <li className="detailsTechniques"><strong>Techniques used:</strong> {technique}</li>
+                </ul>
                 <a href={fullProject} target="blank"><button className="btn-flat">See full project</button></a>
             </div>
         )
