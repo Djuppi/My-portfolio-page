@@ -73,6 +73,7 @@ body {
             grid-area: 1 / 2;
             position: sticky;
             top: 0;
+            background-color: rgba(232, 240, 247, 0.183);
         }
         #logo{
             left: 0;
@@ -549,24 +550,50 @@ footer{
     grid-area: 2 / 2 / 2 / span 2;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto;
+    @include respond-to("handhelds") {
+        grid-area: 2 / 2;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: minmax(min-content, max-content);
+        row-gap: 20px;
+    }
     img {
         grid-area: 1 / 2 / 1 / 2;
         width: 500px;
+        @include respond-to("handhelds") {
+            grid-area: 2 / 1 / 2 / span 2;
+            width: 300px;
+            margin: 0 auto;
+        }
     }
     .detailsName {
-        grid-area: 1 / 1;
+        grid-area: 1 / 1 / 1 / span 2;
         align-self: flex-end;
         margin-bottom: 50px;
         color: $headerColor;
+        @include respond-to("handhelds") {
+            grid-area: 1 / 1 / 1 / span 2;
+            grid-auto-rows: minmax(min-content, 150px);
+            row-gap: 20px;
+            align-self: flex-start;
+        }
     }
     .detailsDescription {
         max-width: 600px;
         margin: 0 auto;
+        @include respond-to("handhelds") {
+            grid-area: 3 / 1 / 3 / span 2;
+            max-width: 300px;
+        }
     }
 
     .detailsList{
         grid-area: 2 / 2;
+        @include respond-to("handhelds") {
+            grid-area: 5 / 1 / 5 / span 2;
+            grid-auto-rows: minmax(min-content, 150px);
+            row-gap: 20px;
+        }
         li{
             margin: 20px;
         }
@@ -574,23 +601,43 @@ footer{
     .detailsLink {
         grid-area: 3 / 1;
         margin-top: 20px;
+        @include respond-to("handhelds") {
+            grid-area: 4 / 1 / 4 / span 2;
+        }
     }
     .btn-link {
         grid-area: 3/ 2;
         align-self: flex-end;
         justify-items: end;
+        @include respond-to("handhelds") {
+            grid-area: 6 / 2;
+            
+        }
     }
     .btn-flat {
         width: 200px;
         height: 50px;
+        @include respond-to("handhelds") {
+            width: 100px;
+            font-size: 0.8rem;
+        }
     }
-    .back{
+    .back {
         grid-area: 1 / 1;
+        width: 30px;
+        height: 30px;
+    }
+    .backIcon{
+        
         margin: 20px 10px;
         font-size: 2rem;
         cursor: pointer;
         &:hover {
             fill: $iconColor;
+        }
+        @include respond-to("handhelds") {
+            font-size: 1.5rem;
+            margin: 0 5px;
         }
         
     }

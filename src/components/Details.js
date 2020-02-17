@@ -55,7 +55,9 @@ class Details extends React.Component {
         
         return(
             <div className="details">
-                <IoIosArrowBack className="back" onClick={this.handleGoBackClick.bind(this)} />
+                <div className="back" onClick={this.handleGoBackClick.bind(this)}>
+                    <IoIosArrowBack className="backIcon"  />
+                </div>
                 <img src={image} alt={name}/>
                 <h1 className="detailsName">{name} </h1>
                 <p className="detailsDescription">{description}</p>
