@@ -3,9 +3,6 @@ import {Button} from 'react-bootstrap'
 import {IoIosArrowForward} from 'react-icons/io'
 
 class Home extends React.Component {
-    constructor(props) {
-        super(props);
-    }
 
     handlePortfolioClick(){
         const { history } = this.props;
@@ -15,12 +12,12 @@ class Home extends React.Component {
         return(
             <div className="home">
                 <div className="home-intro">
-                    <h2>Junior Webdeveloper based in Oslo, Norway. Educated and hired by Academic Work, Norway.</h2>
+                    <h1>Junior Webdeveloper based in Oslo, Norway. Educated and hired by Academic Work, Norway.</h1>
                 </div>
                 
                 <div className="home-portfolio">
-                        <img className="profilePic" src="./media/aske.jpg" />
-                        <p className="summary">JavaScript specialised junior developer, with skills in ReactJS, Node.js and PostgreSQL.</p>
+                        <img className="profilePic" src="./media/aske.jpg" alt="profile" />
+                        <p className="summary">Junior developer specialized in JavaScript, with good skills in ReactJS, Node.js and PostgreSQL.</p>
                         <div>
                     <h4>See what i have done so far</h4>
                     <p className="shortProject">Mostpart of my projects are programmed in ReactJS, but involves different kind of techniques.</p>

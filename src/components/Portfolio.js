@@ -43,7 +43,7 @@ class Portfolio extends React.Component {
         return(
             <div className="portfolio">
                 <h1>Portfolio</h1>
-                <p>Here is some of my projects I've done in my time as a developer.</p>
+                <h2>Here is some of my projects I've done in my time as a developer.</h2>
                 <ul>
                     {allProjects}
                 </ul>
