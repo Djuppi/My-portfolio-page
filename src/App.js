@@ -82,7 +82,7 @@ class App extends React.Component {
         </Switch>
       
       <footer>
-        <p>Find me at: </p>
+        <p className="Find">Find me at: </p>
         <a href="https://github.com/djuppi" target="blank"><img className="logo" src="./media/github.png"></img></a>
         <a href="https://www.linkedin.com/in/aske-djupnes-ammentorp-03434984/" target="blank"><img className="logo" src="./media/LinkedIn.png"></img></a>
         <p className="copyright">Copyright&copy; {format(new Date(Date.now()), 'yyyy')} Aske Djupnes Ammentorp <DiClojureAlt /> IT Consultant at Academic Work, Norway.</p>
