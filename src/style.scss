@@ -26,7 +26,7 @@ body {
     text-align: center;
     display: grid;
     grid-template-columns: 200px repeat(2, 1fr) 200px;
-    grid-template-rows: 50px 2fr 150px;
+    grid-template-rows: 50px 1fr 150px;
     row-gap: 40px;
     position: relative;
     background-color: rgba(232, 240, 247, 0.183);
@@ -35,6 +35,7 @@ body {
         }
     @include respond-to("handhelds") {
         grid-template-columns: 20px 1fr 20px;
+        grid-template-rows: 50px 1fr 50px;
         width: 100%;
         overflow: none;
         h1 {
@@ -48,7 +49,7 @@ body {
             font-size: 1.1rem !important;
         }
         p {
-            font-size: .8rem !important;
+            font-size: .9rem !important;
         }
     }
     @include respond-to("medium-screens") {
@@ -169,7 +170,7 @@ body {
     grid-area: 2 / 2 / 2 / span 2;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-auto-rows: minmax(min-content, min-content);
+    grid-auto-rows: minmax(min-content, max-content);
     row-gap: 50px;
     text-align: center;
     height: 80vh;
@@ -207,7 +208,7 @@ body {
     @include respond-to("handhelds") {
         grid-area: 2 / 1 / 2 / span 2;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: .5fr 1fr;
+        grid-template-rows: 1fr;
         row-gap: 10px;
         padding: 5px;
     };
@@ -240,10 +241,18 @@ body {
     h4 {
         grid-area: 1 / 3 / 1 / 3;
         color: $textColor;
-        margin: 70px;
+        margin: 50px auto;
+        font-weight: 500;
+        justify-self: center;
+        .mobile-description {
+            visibility: hidden;
+            @include respond-to("handhelds") {
+                visibility: visible;
+            }
+        }
         @include respond-to("handhelds") {
-            grid-area: 2 / 1 / 2 /span 2;
-            margin: 10px;
+            grid-area: 2 / 1 / 2 / span 2;
+            margin: auto 10px;
             font-size: 1.2rem;
         }
     }
@@ -254,17 +263,20 @@ body {
         max-height: 50px;
         bottom: 0;
         @include respond-to("handhelds") {
-            grid-area: 2 / 2;
+            grid-area: 2 / 2 / 2 / span 2;
             margin: 0 5px;
             align-self: flex-end;
             margin-bottom: 10px;
+            justify-self: center;
         }
     }
 
     .shortProject {
+        grid-area: 1 / 3 / 1 / 3;
         max-width: 300px;
         margin: 0 auto;
         @include respond-to("handhelds") {
+            display: none;
             font-size: 0.8rem;
         }
     }
@@ -319,7 +331,8 @@ footer{
     @include respond-to("handhelds") {
         position: absolute;
         grid-area: 4 / 1;
-        margin: 0;
+        margin-top: 50px;
+        margin-bottom: -5%;
         bottom: 0;
         height: 130px;
     }
@@ -414,7 +427,7 @@ footer{
     margin-bottom: $footerHeight;
     @include respond-to("handhelds") {
         grid-area: 2 / 2;
-        grid-template-columns: 0.5fr 1fr;
+        grid-template-columns: 1fr;
         grid-template-rows: auto;
         grid-auto-rows: minmax(min-content, 100px) !important;
         row-gap: 40px;
@@ -433,8 +446,25 @@ footer{
         margin: 10px;
         @include respond-to("handhelds") {
            font-size: 2.5rem;
-           margin-left: -10px
+           justify-self: center;
         }
+
+    }
+    .icons {
+        grid-area: 3 / 1 / 3 / 1;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    h4 {
+        display: ffex;
+        align-self: flex-end;
+        grid-area: 1 / 1;
+    }
+    p{
+        grid-area: 2 / 1;
+        text-align: left;
+        margin: 0 auto 0 10px;
     }
     .Html-css {
         grid-area: 2 / 2;
@@ -444,21 +474,10 @@ footer{
         margin-bottom: 220px;
         @include respond-to("handhelds") {
             grid-area: 2 / 1 / 2 / span 2;
-            margin-bottom: 0;
+            grid-template-columns: 1fr;
+            margin: 0;
         }
-        .icons {
-            grid-area: 1 / 1 / span 2 / 1;
-            display: flex;
-            flex-direction: column;    
-        }
-        h4 {
-            display: ffex;
-            align-self: flex-end;
-            grid-area: 1 / 2;
-        }
-        p{
-            grid-area: 2 / 2
-        }
+        
     }
     .Javascript {
         grid-area: 2 / 3;
@@ -468,18 +487,8 @@ footer{
         margin-top: 150px;
         @include respond-to("handhelds") {
             grid-area: 3 / 1 / 3 / span 2;
+            grid-template-columns: 1fr;
             margin: 0;
-        }
-        .icons {
-            grid-area: 1 / 1 / span 2 / 1;
-            display: flex;
-            flex-direction: column;
-        }
-        h4 {
-            grid-area: 1 / 2;
-        }
-        p{
-            grid-area: 2 / 2;
         }
     }
     .After-course {
@@ -491,18 +500,8 @@ footer{
         justify-content: center;
         @include respond-to("handhelds") {
             grid-area: 4 / 1 / 4 / span 2;
+            grid-template-columns: 1fr;
             margin: 0;
-        }
-        .icons {
-            grid-area: 1 / 1 / span 2 / 1;
-            display: flex;
-            flex-direction: column;
-        }
-        h4 {
-            grid-area: 1 / 2;
-        }
-        p{
-            grid-area: 2 / 2
         }
     }
     
@@ -516,6 +515,7 @@ footer{
     @include respond-to("handhelds") {
         grid-area: 2 / 2;
         row-gap: 40px;
+        margin-bottom: 100px;
     }
     img {
         grid-row: 2;
@@ -563,6 +563,7 @@ footer{
         grid-template-columns: 1fr 1fr;
         grid-auto-rows: minmax(min-content, max-content);
         row-gap: 20px;
+        margin-bottom: 100px;
     }
     img {
         grid-area: 1 / 2 / 1 / 2;

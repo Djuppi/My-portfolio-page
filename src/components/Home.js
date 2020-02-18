@@ -19,7 +19,7 @@ class Home extends React.Component {
                         <img className="profilePic" src="./media/aske.jpg" alt="profile" />
                         <p className="summary">Junior developer specialized in JavaScript, with good skills in ReactJS, Node.js and PostgreSQL.</p>
                         <div>
-                    <h4>See what i have done so far</h4>
+                    <h4>See what i have done so far <span className="mobile-description">by clicking the button</span></h4>
                     <p className="shortProject">Mostpart of my projects are programmed in ReactJS, but involves different kind of techniques.</p>
                     </div>
                     <Button onClick={this.handlePortfolioClick.bind(this)} className="btn-flat" variant="flat">Portfolio <IoIosArrowForward /></Button>
