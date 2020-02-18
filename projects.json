@@ -25,17 +25,6 @@
         },
         {
             "id": 3,
-            "name": "Movie Database",
-            "done": false,
-            "projectForm": ["Educational"],
-            "year": "2019",
-            "description": "'Movie Database' is a singlepage webapplication where you can add your own movies, rate them and give your own description. It's a project we had doing our education, which I've worked futher on afterwords.",
-            "techniques": ["NodeJs", "Css Materialize", "PostgreSQL"],
-            "image": "./media/projects/Moviedatabase.png",
-            "fullProject": ""
-        },
-        {
-            "id": 4,
             "name": "Phenix (twitter clone)",
             "done": false,
             "projectForm": ["Educational"],
