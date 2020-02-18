@@ -1,6 +1,5 @@
 import React from 'react'
 import { IoIosArrowBack } from 'react-icons/io'
-import { te } from 'date-fns/locale';
 
 class Details extends React.Component {
     constructor(props) {
@@ -36,12 +35,8 @@ class Details extends React.Component {
     
 
     render() {
-        const { history } = this.props;
         const { 
-            id, 
             name,
-            done, 
-            projectForm, 
             year, 
             description, 
             techniques = [],
@@ -51,7 +46,6 @@ class Details extends React.Component {
         } = this.state.project;
 
         const technique = techniques.join(', ')
-        console.log(technique)
         
         return(
             <div className="details">
