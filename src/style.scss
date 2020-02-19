@@ -19,13 +19,16 @@ $footerHeight: 8rem;
     } 
 }
 
-body, #root {
+html, body, #root {
+    position: relative;
     background-color: rgba(232, 240, 247, 0.183);
+    width: 100%;
+    height: 100% !important;
 }
 
 .App {
     text-align: center;
-    height: 100vh;
+    height: 100% !important;
     display: grid;
     grid-template-columns: 200px repeat(2, 1fr) 200px;
     grid-template-rows: 50px 1fr 150px;
@@ -458,12 +461,7 @@ footer{
         grid-template-columns: 1fr 4fr;
         height: auto;
         margin-bottom: 220px;
-        .icons {
-            grid-area: 1 / 1 / span 2 / 1;
-            display: flex;
-            flex-direction: column;
-            
-        }
+
         h4 {
             display: flex;
             justify-content: center;
@@ -474,10 +472,34 @@ footer{
             text-align: center;
             margin: 0 auto 0 10px;
         }
+        .icons {
+            grid-area: 1 / 1 / span 2 / 1;
+            display: flex;
+            flex-direction: column;
+        }
         @include respond-to("handhelds") {
             grid-area: 2 / 1 / 2 / span 2;
             grid-template-columns: 1fr;
             margin: 0;
+        
+            h4 {
+                display: flex;
+                justify-content: center;
+                grid-area: 1 / 1;
+            }
+            p{
+                grid-area: 2 / 1;
+                text-align: center;
+                margin: 5px auto 0 10px;
+                text-align: left;
+            }
+            .icons {
+                grid-area: 3 / 1 / span 3 / 1;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                margin-top: 5px;
+            }
         }
         
     }
@@ -487,17 +509,7 @@ footer{
         grid-template-columns: 1fr 4fr;
         height: auto;
         margin-top: 150px;
-        @include respond-to("handhelds") {
-            grid-area: 3 / 1 / 3 / span 2;
-            grid-template-columns: 1fr;
-            margin: 0;
-        }
-        .icons {
-            grid-area: 1 / 1 / span 2 / 1;
-            display: flex;
-            flex-direction: column;
-            
-        }
+    
         h4 {
             display: flex;
             justify-content: center;
@@ -507,6 +519,36 @@ footer{
             grid-area: 2 / 2;
             text-align: center;
             margin: 0 auto 0 10px;
+        }
+        .icons {
+            grid-area: 1 / 1 / span 2 / 1;
+            display: flex;
+            flex-direction: column;
+        }
+        @include respond-to("handhelds") {
+            grid-area: 3 / 1 / 3 / span 2;
+            grid-template-columns: 1fr;
+            margin: 0;
+            
+            h4 {
+                display: flex;
+                justify-content: center;
+                grid-area: 1 / 1;
+            }
+            p{
+                grid-area: 2 / 1;
+                text-align: center;
+                margin: 5px auto 0 10px;
+                text-align: left;
+            }
+            .icons {
+                grid-area: 3 / 1 / 3 / 1;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                margin-top: 5px;
+            }
+            
         }
     }
     .After-course {
@@ -515,18 +557,7 @@ footer{
         grid-template-columns: 1fr 4fr;
         height: auto;
         margin-top: -100px;
-        justify-content: center;
-        @include respond-to("handhelds") {
-            grid-area: 4 / 1 / 4 / span 2;
-            grid-template-columns: 1fr;
-            margin: 0;
-        }
-        .icons {
-            grid-area: 1 / 1 / span 2 / 1;
-            display: flex;
-            flex-direction: column;
-            
-        }
+        justify-content: center;        
         h4 {
             display: flex;
             justify-content: center;
@@ -537,8 +568,35 @@ footer{
             text-align: center;
             margin: 0 auto 0 10px;
         }
-    }
-    
+        .icons {
+            grid-area: 1 / 1 / span 2 / 1;
+            display: flex;
+            flex-direction: column;
+        }
+        @include respond-to("handhelds") {
+            grid-area: 4 / 1 / 4 / span 2;
+            grid-template-columns: 1fr;
+            margin: 0;
+            h4 {
+                display: flex;
+                justify-content: center;
+                grid-area: 1 / 1;
+            }
+            p{
+                grid-area: 2 / 1;
+                text-align: center;
+                margin: 5px auto 0 10px;
+                text-align: left;
+            }
+            .icons {
+                grid-area: 3 / 1 / 3 / 1;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                margin-top: 5px;
+            }
+        }
+    }  
 }
 
 .about {
@@ -618,6 +676,8 @@ footer{
             grid-auto-rows: minmax(min-content, 150px);
             row-gap: 20px;
             align-self: flex-start;
+            max-width: 250px;
+            justify-self: center;
         }
     }
     .detailsDescription {
